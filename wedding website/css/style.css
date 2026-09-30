@@ -1,0 +1,7351 @@
+/* =========================================================
+   WEDDING WEBSITE
+   JOHN & MARY
+
+   Elegant responsive design
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+    --cream: #faf7f2;
+
+    --cream-dark: #f1ebe3;
+
+    --white: #ffffff;
+
+    --charcoal: #302d2a;
+
+    --brown: #6e5b4f;
+
+    --brown-light: #9b8778;
+
+    --gold: #b59a72;
+
+    --gold-light: #d4c2a5;
+
+    --dark: #292522;
+
+    --serif:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    --sans:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    --script:
+        "Great Vibes",
+        cursive;
+
+}
+
+/* =========================================================
+   CINEMATIC SAVE THE DATE OPENING
+========================================================= */
+
+#saveTheDateScreen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    overflow: hidden;
+
+    background: #1f1815;
+
+    color: #fff;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition:
+        opacity 1.2s ease,
+        visibility 1.2s ease;
+
+}
+
+
+#saveTheDateScreen.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   SLIDESHOW CONTAINER
+========================================================= */
+
+.opening-slideshow {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   EACH SLIDE
+========================================================= */
+
+.opening-slide {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+
+/* FIRST PHOTO */
+
+.opening-slide-1 {
+
+    animation:
+        openingSlideOne
+        9s
+        ease
+        forwards;
+
+}
+
+
+/* SECOND PHOTO */
+
+.opening-slide-2 {
+
+    animation:
+        openingSlideTwo
+        9s
+        ease
+        forwards;
+
+}
+
+
+/* THIRD PHOTO */
+
+.opening-slide-3 {
+
+    animation:
+        openingSlideThree
+        9s
+        ease
+        forwards;
+
+}
+
+
+/* =========================================================
+   PHOTO
+========================================================= */
+
+.opening-photo {
+
+    position: absolute;
+
+    inset: -5%;
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.12);
+
+}
+
+
+/* PHOTO 1 */
+
+.opening-slide-1 .opening-photo {
+
+    background-image:
+        url("../images/photo1.jpg");
+
+}
+
+
+/* PHOTO 2 */
+
+.opening-slide-2 .opening-photo {
+
+    background-image:
+        url("../images/photo2.jpg");
+
+}
+
+
+/* PHOTO 3 */
+
+.opening-slide-3 .opening-photo {
+
+    background-image:
+        url("../images/photo3.jpg");
+
+}
+
+
+/* =========================================================
+   PHOTO OVERLAY
+========================================================= */
+
+.opening-photo-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(25,19,16,.72),
+            rgba(25,19,16,.30),
+            rgba(25,19,16,.72)
+        );
+
+}
+
+
+/* =========================================================
+   SLIDE ANIMATIONS
+========================================================= */
+
+@keyframes openingSlideOne {
+
+    0% {
+
+        opacity: 0;
+
+        visibility: visible;
+
+    }
+
+    5% {
+
+        opacity: 1;
+
+    }
+
+    27% {
+
+        opacity: 1;
+
+    }
+
+    33% {
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        visibility: hidden;
+
+    }
+
+}
+
+
+@keyframes openingSlideTwo {
+
+    0% {
+
+        opacity: 0;
+
+        visibility: hidden;
+
+    }
+
+    27% {
+
+        opacity: 0;
+
+        visibility: visible;
+
+    }
+
+    33% {
+
+        opacity: 1;
+
+    }
+
+    60% {
+
+        opacity: 1;
+
+    }
+
+    66% {
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        visibility: hidden;
+
+    }
+
+}
+
+
+@keyframes openingSlideThree {
+
+    0% {
+
+        opacity: 0;
+
+        visibility: hidden;
+
+    }
+
+    60% {
+
+        opacity: 0;
+
+        visibility: visible;
+
+    }
+
+    66% {
+
+        opacity: 1;
+
+    }
+
+    94% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        visibility: hidden;
+
+    }
+
+}
+
+
+/* =========================================================
+   PHOTO ZOOM
+========================================================= */
+
+.opening-slide-1 .opening-photo {
+
+    animation:
+        openingZoom1
+        9s
+        ease-out
+        forwards;
+
+}
+
+
+.opening-slide-2 .opening-photo {
+
+    animation:
+        openingZoom2
+        9s
+        ease-out
+        forwards;
+
+}
+
+
+.opening-slide-3 .opening-photo {
+
+    animation:
+        openingZoom3
+        9s
+        ease-out
+        forwards;
+
+}
+
+
+@keyframes openingZoom1 {
+
+    from {
+
+        transform:
+            scale(1.15);
+
+    }
+
+    to {
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes openingZoom2 {
+
+    from {
+
+        transform:
+            scale(1.08);
+
+    }
+
+    to {
+
+        transform:
+            scale(1.18);
+
+    }
+
+}
+
+
+@keyframes openingZoom3 {
+
+    from {
+
+        transform:
+            scale(1.15);
+
+    }
+
+    to {
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   DATE CONTENT
+========================================================= */
+
+.opening-date-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+
+    width: 90%;
+
+    max-width: 700px;
+
+    animation:
+        openingTextReveal
+        1.4s
+        ease
+        forwards;
+
+}
+
+
+@keyframes openingTextReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* SMALL TEXT */
+
+.opening-small-text {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 15px;
+
+    opacity: .9;
+
+}
+
+
+/* =========================================================
+   BIG DATE
+========================================================= */
+
+.opening-main-date {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(100px, 20vw, 220px);
+
+    font-weight: 400;
+
+    line-height: .8;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 10px 40px
+        rgba(0,0,0,.35);
+
+}
+
+
+/* =========================================================
+   LINE
+========================================================= */
+
+.opening-date-line {
+
+    width: 80px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,.75);
+
+    margin:
+        25px
+        auto
+        18px;
+
+}
+
+
+/* =========================================================
+   CAPTION
+========================================================= */
+
+.opening-caption {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    opacity: .8;
+
+}
+
+
+/* =========================================================
+   BOTTOM INFORMATION
+========================================================= */
+
+.opening-bottom {
+
+    position: absolute;
+
+    z-index: 20;
+
+    left: 50%;
+
+    bottom: 35px;
+
+    transform:
+        translateX(-50%);
+
+    text-align: center;
+
+    width: 100%;
+
+    pointer-events: none;
+
+}
+
+
+/* COUPLE */
+
+.opening-couple {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 27px;
+
+}
+
+
+.opening-couple span {
+
+    margin:
+        0 5px;
+
+}
+
+
+/* LOCATION */
+
+.opening-location {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    margin-top: 4px;
+
+    opacity: .75;
+
+}
+
+
+/* =========================================================
+   DAYS LEFT
+========================================================= */
+
+.opening-days-box {
+
+    position: absolute;
+
+    left: 30px;
+
+    bottom: 0;
+
+    text-align: left;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.opening-days-box span {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+}
+
+
+.opening-days-box small {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    opacity: .65;
+
+}
+
+
+/* =========================================================
+   TIMER
+========================================================= */
+
+.opening-timer {
+
+    position: absolute;
+
+    z-index: 30;
+
+    right: 30px;
+
+    bottom: 30px;
+
+    width: 48px;
+
+    height: 48px;
+
+}
+
+
+.opening-timer svg {
+
+    width: 100%;
+
+    height: 100%;
+
+    transform:
+        rotate(-90deg);
+
+}
+
+
+.opening-timer-track {
+
+    fill: none;
+
+    stroke:
+        rgba(255,255,255,.18);
+
+    stroke-width: 2;
+
+}
+
+
+.opening-timer-progress {
+
+    fill: none;
+
+    stroke: #fff;
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+
+    stroke-dasharray:
+        276.46;
+
+    stroke-dashoffset: 0;
+
+}
+
+
+.opening-timer > span {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .opening-main-date {
+
+        font-size:
+            clamp(
+                100px,
+                30vw,
+                160px
+            );
+
+    }
+
+
+    .opening-small-text {
+
+        font-size: 8px;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .opening-caption {
+
+        font-size: 7px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .opening-couple {
+
+        font-size: 24px;
+
+    }
+
+
+    .opening-location {
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .opening-days-box {
+
+        left: 18px;
+
+    }
+
+
+    .opening-timer {
+
+        right: 18px;
+
+        bottom: 20px;
+
+    }
+
+}
+
+
+#saveTheDateScreen.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+
+/* BACKGROUND */
+
+.save-date-bg {
+
+    position: absolute;
+
+    inset: -5%;
+
+    background-image:
+        url("../images/couple.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.08);
+
+    animation:
+        saveDateZoom 12s
+        ease-out
+        forwards;
+
+}
+
+
+@keyframes saveDateZoom {
+
+    0% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* DARK OVERLAY */
+
+.save-date-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(31, 24, 20, .82),
+            rgba(31, 24, 20, .45),
+            rgba(31, 24, 20, .82)
+        );
+
+}
+
+
+/* CONTENT */
+
+.save-date-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(90%, 600px);
+
+    text-align: center;
+
+    padding: 30px;
+
+    animation:
+        saveDateContentIn 1.5s
+        ease forwards;
+
+}
+
+
+@keyframes saveDateContentIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* TOP TEXT */
+
+.save-date-top {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+    opacity: .9;
+
+}
+
+
+/* ORNAMENT */
+
+.save-date-ornament {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.save-date-ornament span {
+
+    width: 65px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,.65);
+
+}
+
+
+.save-date-ornament i {
+
+    font-size: 11px;
+
+    opacity: .9;
+
+}
+
+
+/* SCRIPT */
+
+.save-date-script {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* NAMES */
+
+.save-date-names {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(48px, 8vw, 82px);
+
+    font-weight: 500;
+
+    line-height: .95;
+
+    margin: 0 0 30px;
+
+}
+
+
+.save-date-names span {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: .65em;
+
+    margin: 0 8px;
+
+}
+
+
+/* DATE */
+
+.save-date-date {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.save-date-day {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 58px;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+}
+
+
+.save-date-month {
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: left;
+
+    border-left:
+        1px solid
+        rgba(255,255,255,.5);
+
+    padding-left: 15px;
+
+}
+
+
+.save-date-month strong {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.save-date-month small {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-top: 3px;
+
+}
+
+
+/* LOCATION */
+
+.save-date-location {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.save-date-location i {
+
+    margin-right: 5px;
+
+}
+
+
+/* DAYS LEFT */
+
+.save-date-days-box {
+
+    margin: 10px auto 20px;
+
+}
+
+
+.save-date-days {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 42px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+}
+
+
+.save-date-days-label {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    margin-top: 5px;
+
+    opacity: .8;
+
+}
+
+
+/* TIMER */
+
+.save-date-timer {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin: 15px 0;
+
+}
+
+
+.timer-ring {
+
+    position: relative;
+
+    width: 62px;
+
+    height: 62px;
+
+}
+
+
+.timer-ring svg {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    transform:
+        rotate(-90deg);
+
+}
+
+
+.timer-track {
+
+    fill: none;
+
+    stroke:
+        rgba(255,255,255,.15);
+
+    stroke-width: 2;
+
+}
+
+
+.timer-progress {
+
+    fill: none;
+
+    stroke: #fff;
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+
+    stroke-dasharray: 276.46;
+
+    stroke-dashoffset: 0;
+
+}
+
+
+.timer-number {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.timer-number span {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+}
+
+
+/* MESSAGE */
+
+.save-date-message {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 22px;
+
+    opacity: .9;
+
+    margin-top: 5px;
+
+}
+
+
+/* PROGRESS BAR */
+
+.save-date-loading {
+
+    width: 180px;
+
+    height: 2px;
+
+    margin: 20px auto 0;
+
+    background:
+        rgba(255,255,255,.18);
+
+    overflow: hidden;
+
+}
+
+
+.save-date-progress {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: #fff;
+
+}
+
+
+/* =========================================================
+   INVITATION FRONT PAGE
+========================================================= */
+
+.invitation-front {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99998;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #2c2420;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 1.2s ease,
+        visibility 1.2s ease;
+
+}
+
+
+.invitation-front.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+
+/* =========================================================
+   SLIDESHOW
+========================================================= */
+
+.invitation-slideshow {
+
+    position: absolute;
+
+    inset: 0;
+
+}
+
+
+.invitation-slide {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-size: cover;
+
+    background-position: center;
+
+    opacity: 0;
+
+    transform: scale(1.08);
+
+    animation:
+        invitationSlide 20s
+        infinite;
+
+}
+
+
+/* PHOTO 1 */
+
+.invitation-slide.slide-1 {
+
+    background-image:
+        url("../images/couple.jpg");
+
+    animation-delay: 0s;
+
+}
+
+
+/* PHOTO 2 */
+
+.invitation-slide.slide-2 {
+
+    background-image:
+        url("../images/photo1.jpg");
+
+    animation-delay: 4s;
+
+}
+
+
+/* PHOTO 3 */
+
+.invitation-slide.slide-3 {
+
+    background-image:
+        url("../images/photo2.jpg");
+
+    animation-delay: 8s;
+
+}
+
+
+/* PHOTO 4 */
+
+.invitation-slide.slide-4 {
+
+    background-image:
+        url("../images/photo3.jpg");
+
+    animation-delay: 12s;
+
+}
+
+
+/* PHOTO 5 */
+
+.invitation-slide.slide-5 {
+
+    background-image:
+        url("../images/photo4.jpg");
+
+    animation-delay: 16s;
+
+}
+
+
+@keyframes invitationSlide {
+
+    0% {
+
+        opacity: 0;
+
+        transform: scale(1.08);
+
+    }
+
+    5% {
+
+        opacity: 1;
+
+    }
+
+    20% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+    25% {
+
+        opacity: 0;
+
+        transform: scale(1.02);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================================================
+   INVITATION OVERLAY
+========================================================= */
+
+.invitation-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(30, 23, 19, .72),
+            rgba(30, 23, 19, .32),
+            rgba(30, 23, 19, .75)
+        );
+
+}
+
+
+/* =========================================================
+   INVITATION CONTENT
+========================================================= */
+
+.invitation-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(90%, 650px);
+
+    text-align: center;
+
+    color: #fff;
+
+    padding: 35px;
+
+    animation:
+        invitationContentIn
+        1.5s
+        ease
+        .3s
+        both;
+
+}
+
+
+@keyframes invitationContentIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(.97);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* KICKER */
+
+.invitation-kicker {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ORNAMENT */
+
+.invitation-ornament {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.invitation-ornament span {
+
+    width: 70px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,.6);
+
+}
+
+
+.invitation-ornament i {
+
+    font-size: 11px;
+
+}
+
+
+/* YOU ARE */
+
+.invitation-script {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 39px;
+
+    line-height: 1;
+
+}
+
+
+.invitation-script-small {
+
+    font-size: 24px;
+
+    margin-top: 5px;
+
+}
+
+
+/* INVITED */
+
+.invitation-title {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(70px, 12vw, 120px);
+
+    font-weight: 500;
+
+    line-height: .85;
+
+    margin: 5px 0 5px;
+
+    text-shadow:
+        0 5px 30px
+        rgba(0,0,0,.25);
+
+}
+
+
+/* NAMES */
+
+.invitation-names {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 36px;
+
+    letter-spacing: 2px;
+
+    margin-top: 25px;
+
+}
+
+
+.invitation-names span {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 32px;
+
+    margin: 0 8px;
+
+}
+
+
+/* DATE */
+
+.invitation-date {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 18px 0;
+
+}
+
+
+.invitation-date > span {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 46px;
+
+    line-height: 1;
+
+}
+
+
+.invitation-date > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: left;
+
+    border-left:
+        1px solid
+        rgba(255,255,255,.55);
+
+    padding-left: 12px;
+
+}
+
+
+.invitation-date strong {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.invitation-date small {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* DESCRIPTION */
+
+.invitation-text {
+
+    max-width: 420px;
+
+    margin: 15px auto 25px;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    opacity: .9;
+
+}
+
+
+/* OPEN BUTTON */
+
+.enter-invitation {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    border: 1px solid
+        rgba(255,255,255,.75);
+
+    background:
+        rgba(255,255,255,.08);
+
+    color: #fff;
+
+    padding: 14px 26px;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        all .4s ease;
+
+}
+
+
+.enter-invitation i {
+
+    transition:
+        transform .4s ease;
+
+}
+
+
+.enter-invitation:hover {
+
+    background: #fff;
+
+    color: #3a2d27;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.enter-invitation:hover i {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* HINT */
+
+.invitation-hint {
+
+    margin-top: 15px;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    opacity: .55;
+
+}
+
+
+/* =========================================================
+   DECORATIVE CORNERS
+========================================================= */
+
+.invitation-corner {
+
+    position: absolute;
+
+    z-index: 4;
+
+    width: 100px;
+
+    height: 100px;
+
+    opacity: .65;
+
+}
+
+
+.corner-top-left {
+
+    top: 25px;
+
+    left: 25px;
+
+    border-top:
+        1px solid rgba(255,255,255,.5);
+
+    border-left:
+        1px solid rgba(255,255,255,.5);
+
+}
+
+
+.corner-top-right {
+
+    top: 25px;
+
+    right: 25px;
+
+    border-top:
+        1px solid rgba(255,255,255,.5);
+
+    border-right:
+        1px solid rgba(255,255,255,.5);
+
+}
+
+
+.corner-bottom-left {
+
+    bottom: 25px;
+
+    left: 25px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.5);
+
+    border-left:
+        1px solid rgba(255,255,255,.5);
+
+}
+
+
+.corner-bottom-right {
+
+    bottom: 25px;
+
+    right: 25px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.5);
+
+    border-right:
+        1px solid rgba(255,255,255,.5);
+
+}
+
+
+/* =========================================================
+   SLIDE DOTS
+========================================================= */
+
+.invitation-dots {
+
+    position: absolute;
+
+    z-index: 10;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    gap: 7px;
+
+}
+
+
+.invitation-dots span {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.4);
+
+    transition:
+        all .4s ease;
+
+}
+
+
+.invitation-dots span.active {
+
+    width: 24px;
+
+    border-radius: 5px;
+
+    background: #fff;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .save-date-content {
+
+        padding: 20px;
+
+    }
+
+
+    .save-date-top {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .save-date-script {
+
+        font-size: 30px;
+
+    }
+
+
+    .save-date-names {
+
+        font-size: 52px;
+
+        margin-bottom: 24px;
+
+    }
+
+
+    .save-date-day {
+
+        font-size: 48px;
+
+    }
+
+
+    .save-date-location {
+
+        font-size: 11px;
+
+    }
+
+
+    .save-date-days {
+
+        font-size: 36px;
+
+    }
+
+
+    .invitation-content {
+
+        padding: 25px 20px;
+
+    }
+
+
+    .invitation-kicker {
+
+        font-size: 8px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .invitation-script {
+
+        font-size: 32px;
+
+    }
+
+
+    .invitation-title {
+
+        font-size: 76px;
+
+    }
+
+
+    .invitation-script-small {
+
+        font-size: 21px;
+
+    }
+
+
+    .invitation-names {
+
+        font-size: 30px;
+
+    }
+
+
+    .invitation-date {
+
+        margin: 14px 0;
+
+    }
+
+
+    .invitation-text {
+
+        font-size: 12px;
+
+        line-height: 1.7;
+
+        max-width: 300px;
+
+    }
+
+
+    .enter-invitation {
+
+        padding: 13px 20px;
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .invitation-corner {
+
+        width: 55px;
+
+        height: 55px;
+
+    }
+
+
+    .corner-top-left,
+    .corner-top-right {
+
+        top: 15px;
+
+    }
+
+
+    .corner-bottom-left,
+    .corner-bottom-right {
+
+        bottom: 15px;
+
+    }
+
+
+    .corner-top-left,
+    .corner-bottom-left {
+
+        left: 15px;
+
+    }
+
+
+    .corner-top-right,
+    .corner-bottom-right {
+
+        right: 15px;
+
+    }
+
+}
+/* =========================================================
+   RESET
+========================================================= */
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 80px;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    background: var(--cream);
+
+    color: var(--charcoal);
+
+    font-family: var(--sans);
+
+    overflow-x: hidden;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+button,
+a {
+
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+
+/* =========================================================
+   PAGE LOADER
+========================================================= */
+
+#pageLoader {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    background: var(--cream);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+
+}
+
+
+#pageLoader.loaded {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+
+.loader-content {
+
+    text-align: center;
+
+}
+
+
+.loader-rings {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: auto;
+
+    position: relative;
+
+}
+
+
+.loader-rings span {
+
+    position: absolute;
+
+    inset: 0;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 50%;
+
+    animation:
+        loaderPulse 1.8s infinite ease-in-out;
+
+}
+
+
+.loader-rings span:nth-child(2) {
+
+    animation-delay: 0.5s;
+
+}
+
+
+.loader-script {
+
+    font-family: var(--script);
+
+    font-size: 40px;
+
+    margin-top: 20px;
+
+}
+
+
+.loader-text {
+
+    font-family: var(--sans);
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    margin-top: 5px;
+
+}
+
+
+@keyframes loaderPulse {
+
+    0% {
+
+        transform: scale(0.7);
+
+        opacity: 0;
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: scale(1.3);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.wedding-navbar {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid rgba(181, 154, 114, 0.12);
+
+    transition:
+        padding 0.4s ease,
+        box-shadow 0.4s ease;
+
+    padding: 18px 0;
+
+}
+
+
+.wedding-navbar.scrolled {
+
+    padding: 10px 0;
+
+    box-shadow:
+        0 8px 30px rgba(40, 30, 20, 0.08);
+
+}
+
+
+.wedding-brand {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1;
+
+}
+
+
+.brand-small {
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: var(--brown-light);
+
+    margin-bottom: 5px;
+
+}
+
+
+.brand-names {
+
+    font-family: var(--serif);
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: var(--charcoal);
+
+}
+
+
+.brand-names i {
+
+    font-size: 9px;
+
+    color: var(--gold);
+
+    vertical-align: middle;
+
+}
+
+
+.navbar-nav {
+
+    gap: 8px;
+
+}
+
+
+.nav-link {
+
+    position: relative;
+
+    color: var(--charcoal) !important;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    padding: 8px 14px !important;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+
+    right: 14px;
+
+    bottom: 2px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.nav-link:hover,
+.nav-link.active {
+
+    color: var(--brown) !important;
+
+}
+
+
+.nav-link:hover::after,
+.nav-link.active::after {
+
+    transform: scaleX(1);
+
+}
+
+
+.nav-rsvp {
+
+    border: 1px solid var(--gold);
+
+    margin-left: 8px;
+
+}
+
+
+.nav-rsvp::after {
+
+    display: none;
+
+}
+
+
+.navbar-toggler {
+
+    border: 0;
+
+    box-shadow: none !important;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section {
+
+    min-height: 100vh;
+
+    height: 900px;
+
+    max-height: 1000px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    color: white;
+
+}
+
+
+.hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("../images/couple.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.05);
+
+    animation:
+        heroZoom 12s ease-out forwards;
+
+}
+
+
+@keyframes heroZoom {
+
+    from {
+
+        transform: scale(1.12);
+
+    }
+
+    to {
+
+        transform: scale(1.02);
+
+    }
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(20, 15, 12, 0.42),
+            rgba(20, 15, 12, 0.20) 45%,
+            rgba(20, 15, 12, 0.55)
+        );
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    padding: 120px 20px 60px;
+
+    text-align: center;
+
+}
+
+
+.hero-kicker {
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    font-weight: 500;
+
+}
+
+
+.hero-ornament,
+.section-ornament {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 20px auto;
+
+}
+
+
+.hero-ornament span,
+.section-ornament span {
+
+    width: 45px;
+
+    height: 1px;
+
+    background: currentColor;
+
+    opacity: 0.65;
+
+}
+
+
+.hero-ornament i {
+
+    font-size: 10px;
+
+    color: var(--gold-light);
+
+}
+
+
+.hero-names {
+
+    font-family: var(--serif);
+
+    font-size: clamp(75px, 12vw, 145px);
+
+    font-weight: 400;
+
+    line-height: 0.78;
+
+    letter-spacing: -4px;
+
+    margin: 15px 0 10px;
+
+    text-shadow:
+        0 5px 30px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.hero-names span {
+
+    display: inline-block;
+
+    font-family: var(--script);
+
+    font-size: 0.52em;
+
+    margin: 0 8px;
+
+    color: var(--gold-light);
+
+    letter-spacing: 0;
+
+    vertical-align: middle;
+
+}
+
+
+.hero-script {
+
+    font-family: var(--script);
+
+    font-size: clamp(32px, 5vw, 52px);
+
+    margin-top: 25px;
+
+}
+
+
+.hero-date {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+}
+
+
+.hero-date > span {
+
+    font-family: var(--serif);
+
+    font-size: 55px;
+
+    line-height: 1;
+
+}
+
+
+.hero-date div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: left;
+
+    border-left: 1px solid rgba(255,255,255,0.55);
+
+    padding-left: 15px;
+
+}
+
+
+.hero-date strong {
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: 500;
+
+}
+
+
+.hero-date small {
+
+    font-family: var(--serif);
+
+    font-size: 22px;
+
+}
+
+
+.hero-location {
+
+    margin-top: 18px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.hero-location i {
+
+    color: var(--gold-light);
+
+    margin-right: 6px;
+
+}
+
+
+.hero-scroll {
+
+    display: inline-flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 50px;
+
+    color: white;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.hero-scroll i {
+
+    animation:
+        scrollBounce 1.8s infinite;
+
+}
+
+
+@keyframes scrollBounce {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(6px);
+
+    }
+
+}
+
+
+/* Decorative flowers */
+
+.hero-flower {
+
+    position: absolute;
+
+    z-index: 2;
+
+    opacity: 0.25;
+
+    color: white;
+
+    font-size: 80px;
+
+    pointer-events: none;
+
+}
+
+
+.flower-one {
+
+    left: 4%;
+
+    bottom: 8%;
+
+    animation:
+        floatingFlower 7s ease-in-out infinite;
+
+}
+
+
+.flower-two {
+
+    right: 5%;
+
+    top: 25%;
+
+    font-size: 55px;
+
+    animation:
+        floatingFlower 8s ease-in-out infinite reverse;
+
+}
+
+
+@keyframes floatingFlower {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-18px)
+            rotate(8deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.section-padding {
+
+    padding: 115px 0;
+
+}
+
+
+.section-kicker {
+
+    color: var(--brown-light);
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+}
+
+
+.section-kicker.light {
+
+    color: var(--gold-light);
+
+}
+
+
+.section-ornament {
+
+    color: var(--gold);
+
+}
+
+
+.section-ornament i {
+
+    font-size: 11px;
+
+}
+
+
+.section-title {
+
+    font-family: var(--serif);
+
+    font-size: clamp(42px, 5vw, 62px);
+
+    line-height: 0.95;
+
+    font-weight: 500;
+
+    margin: 15px 0 20px;
+
+}
+
+
+.section-title.light {
+
+    color: white;
+
+}
+
+
+.section-description {
+
+    max-width: 550px;
+
+    margin: auto;
+
+    color: #82766d;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.story-section {
+
+    background: var(--cream);
+
+    position: relative;
+
+}
+
+
+.story-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    width: 1px;
+
+    height: 45px;
+
+    background: var(--gold-light);
+
+}
+
+
+.story-text {
+
+    max-width: 650px;
+
+    margin: 35px auto 0;
+
+    color: #766b64;
+
+    font-family: var(--serif);
+
+    font-size: 23px;
+
+    line-height: 1.65;
+
+}
+
+
+.script-signature {
+
+    margin-top: 35px;
+
+    font-family: var(--script);
+
+    font-size: 42px;
+
+    color: var(--brown);
+
+}
+
+
+.script-signature span {
+
+    color: var(--gold);
+
+    margin: 0 5px;
+
+}
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+.countdown-section {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 100px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3a312c,
+            #54463c
+        );
+
+    color: white;
+
+}
+
+
+.countdown-pattern {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.07;
+
+    background-image:
+        radial-gradient(
+            circle at 20% 30%,
+            white 1px,
+            transparent 1px
+        );
+
+    background-size: 35px 35px;
+
+}
+
+
+.countdown-title {
+
+    font-family: var(--serif);
+
+    font-size: clamp(40px, 5vw, 60px);
+
+    font-weight: 400;
+
+    margin: 10px 0 45px;
+
+}
+
+
+.countdown-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: clamp(15px, 4vw, 50px);
+
+}
+
+
+.countdown-item {
+
+    min-width: 95px;
+
+}
+
+
+.countdown-number {
+
+    font-family: var(--serif);
+
+    font-size: clamp(50px, 7vw, 80px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.countdown-number.tick {
+
+    animation:
+        countdownTick 0.4s ease;
+
+}
+
+
+@keyframes countdownTick {
+
+    0% {
+
+        transform: translateY(-5px);
+
+        opacity: 0.5;
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+.countdown-label {
+
+    margin-top: 10px;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: var(--gold-light);
+
+}
+
+
+.countdown-divider {
+
+    font-family: var(--serif);
+
+    font-size: 50px;
+
+    color: var(--gold-light);
+
+    margin-top: -20px;
+
+}
+
+
+.countdown-date {
+
+    margin-top: 45px;
+
+    font-family: var(--serif);
+
+    font-size: 20px;
+
+}
+
+
+.countdown-date span {
+
+    color: var(--gold);
+
+    margin: 0 10px;
+
+}
+
+
+/* =========================================================
+   PHOTOS
+========================================================= */
+
+.photos-section {
+
+    background: white;
+
+}
+
+
+.photo-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    grid-auto-rows: 270px;
+
+    gap: 14px;
+
+}
+
+
+.photo-item {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--cream-dark);
+
+    cursor: pointer;
+
+}
+
+
+.photo-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.8s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.photo-item:hover img {
+
+    transform: scale(1.07);
+
+}
+
+
+.photo-large {
+
+    grid-row:
+        span 2;
+
+}
+
+
+.photo-wide {
+
+    grid-column:
+        span 2;
+
+}
+
+
+.photo-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(35, 29, 25, 0.35);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.4s ease;
+
+}
+
+
+.photo-overlay i {
+
+    width: 45px;
+
+    height: 45px;
+
+    border: 1px solid rgba(255,255,255,0.7);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    transform: scale(0.7);
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+
+.photo-item:hover .photo-overlay {
+
+    opacity: 1;
+
+}
+
+
+.photo-item:hover .photo-overlay i {
+
+    transform: scale(1);
+
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.details-section {
+
+    background: var(--cream);
+
+}
+
+
+.detail-card {
+
+    position: relative;
+
+    height: 100%;
+
+    padding: 55px 30px;
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px solid rgba(181, 154, 114, 0.16);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+}
+
+
+.detail-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 55px rgba(50, 40, 30, 0.09);
+
+}
+
+
+.detail-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: auto;
+
+    border: 1px solid var(--gold-light);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--gold);
+
+}
+
+
+.detail-number {
+
+    margin-top: 25px;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: var(--brown-light);
+
+}
+
+
+.detail-card h3 {
+
+    font-family: var(--serif);
+
+    font-size: 36px;
+
+    font-weight: 500;
+
+    margin: 5px 0;
+
+}
+
+
+.detail-line {
+
+    width: 35px;
+
+    height: 1px;
+
+    margin: 20px auto;
+
+    background: var(--gold);
+
+}
+
+
+.detail-card p {
+
+    color: #766c65;
+
+    font-size: 13px;
+
+}
+
+
+.detail-card .detail-date {
+
+    color: var(--brown);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+}
+
+
+.detail-place {
+
+    font-family: var(--serif);
+
+    font-size: 19px !important;
+
+    line-height: 1.5;
+
+    margin-top: 20px;
+
+}
+
+
+.map-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 15px;
+
+    padding: 10px 18px;
+
+    border: 1px solid var(--gold);
+
+    color: var(--brown);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+.map-button:hover {
+
+    background: var(--brown);
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   IFRAME RSVP
+========================================================= */
+
+.iframe-section {
+
+    background: white;
+
+}
+
+
+.iframe-card {
+
+    max-width: 850px;
+
+    min-height: 520px;
+
+    margin: auto;
+
+    background: white;
+
+    border: 1px solid rgba(181, 154, 114, 0.25);
+
+    box-shadow:
+        0 20px 60px rgba(50, 40, 30, 0.08);
+
+    overflow: hidden;
+
+}
+
+
+.iframe-placeholder {
+
+    min-height: 520px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fcfaf7,
+            #f4eee7
+        );
+
+}
+
+
+.iframe-placeholder-icon {
+
+    width: 80px;
+
+    height: 80px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--gold-light);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--gold);
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.iframe-placeholder h3 {
+
+    font-family: var(--serif);
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+}
+
+
+.iframe-placeholder p {
+
+    color: #7c7169;
+
+    font-size: 14px;
+
+}
+
+
+.iframe-placeholder span {
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: var(--brown-light);
+
+    text-transform: uppercase;
+
+}
+
+
+.wedding-iframe {
+
+    width: 100%;
+
+    height: 650px;
+
+    border: 0;
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   GUEST MESSAGE SECTION
+========================================================= */
+
+.message-section {
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #342d28,
+            #4a3e35
+        );
+
+    color: white;
+
+}
+
+
+.message-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.06;
+
+    background-image:
+        radial-gradient(
+            circle,
+            white 1px,
+            transparent 1px
+        );
+
+    background-size: 30px 30px;
+
+}
+
+
+.message-section > .container {
+
+    position: relative;
+
+}
+
+
+.iframe-dark {
+
+    background: rgba(255,255,255,0.04);
+
+    border-color:
+        rgba(212,194,165,0.2);
+
+}
+
+
+.dark-placeholder {
+
+    background:
+        rgba(255,255,255,0.035);
+
+    color: white;
+
+}
+
+
+.dark-placeholder p {
+
+    color: rgba(255,255,255,0.65);
+
+}
+
+
+.dark-placeholder span {
+
+    color: var(--gold-light);
+
+}
+
+
+/* =========================================================
+   FINAL SECTION
+========================================================= */
+
+.final-section {
+
+    position: relative;
+
+    padding: 120px 0;
+
+    background: var(--cream);
+
+    overflow: hidden;
+
+}
+
+
+.final-decoration {
+
+    position: absolute;
+
+    left: 5%;
+
+    top: 20%;
+
+    font-size: 100px;
+
+    color: var(--gold-light);
+
+    opacity: 0.18;
+
+    animation:
+        floatingFlower 7s ease-in-out infinite;
+
+}
+
+
+.final-script {
+
+    font-family: var(--script);
+
+    color: var(--brown);
+
+    font-size: clamp(38px, 5vw, 58px);
+
+    line-height: 1.2;
+
+}
+
+
+.final-names {
+
+    font-family: var(--serif);
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    font-weight: 500;
+
+    margin: 20px 0 5px;
+
+}
+
+
+.final-date {
+
+    letter-spacing: 4px;
+
+    font-size: 10px;
+
+    color: var(--brown-light);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.wedding-footer {
+
+    background: var(--dark);
+
+    color: white;
+
+    padding: 65px 0;
+
+}
+
+
+.footer-brand {
+
+    font-family: var(--serif);
+
+    font-size: 34px;
+
+}
+
+
+.footer-brand span {
+
+    font-family: var(--script);
+
+    color: var(--gold-light);
+
+}
+
+
+.wedding-footer p {
+
+    color: rgba(255,255,255,0.55);
+
+    font-family: var(--serif);
+
+    font-size: 18px;
+
+}
+
+
+.footer-line {
+
+    width: 40px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 25px auto;
+
+}
+
+
+.wedding-footer small {
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,0.4);
+
+}
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.photo-lightbox {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9998;
+
+    background:
+        rgba(20, 17, 15, 0.94);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease;
+
+}
+
+
+.photo-lightbox.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.photo-lightbox img {
+
+    max-width: min(1000px, 95vw);
+
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    box-shadow:
+        0 20px 70px rgba(0,0,0,0.5);
+
+    transform: scale(0.92);
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+
+.photo-lightbox.show img {
+
+    transform: scale(1);
+
+}
+
+
+.lightbox-close {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 25px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border: 1px solid rgba(255,255,255,0.4);
+
+    background: transparent;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+
+    transition:
+        background 0.3s ease;
+
+}
+
+
+.lightbox-close:hover {
+
+    background: rgba(255,255,255,0.12);
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.delay-1 {
+
+    transition-delay: 0.12s;
+
+}
+
+
+.delay-2 {
+
+    transition-delay: 0.22s;
+
+}
+
+
+.delay-3 {
+
+    transition-delay: 0.32s;
+
+}
+
+
+.delay-4 {
+
+    transition-delay: 0.42s;
+
+}
+
+
+.delay-5 {
+
+    transition-delay: 0.52s;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .wedding-navbar {
+
+        padding: 12px 0;
+
+    }
+
+
+    .navbar-collapse {
+
+        margin-top: 15px;
+
+        padding: 15px;
+
+        background: rgba(255,255,255,0.98);
+
+        border-radius: 8px;
+
+        box-shadow:
+            0 15px 35px rgba(40,30,20,0.08);
+
+    }
+
+
+    .nav-link {
+
+        padding: 12px 5px !important;
+
+    }
+
+
+    .nav-rsvp {
+
+        margin-left: 0;
+
+        margin-top: 5px;
+
+        text-align: center;
+
+    }
+
+
+    .hero-section {
+
+        height: 100svh;
+
+        min-height: 700px;
+
+    }
+
+
+    .hero-content {
+
+        padding-top: 100px;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .section-padding {
+
+        padding: 80px 0;
+
+    }
+
+
+    .hero-names {
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .hero-script {
+
+        margin-top: 20px;
+
+    }
+
+
+    .hero-scroll {
+
+        margin-top: 35px;
+
+    }
+
+
+    .countdown-section {
+
+        padding: 80px 15px;
+
+    }
+
+
+    .countdown-wrapper {
+
+        gap: 8px;
+
+    }
+
+
+    .countdown-item {
+
+        min-width: 65px;
+
+    }
+
+
+    .countdown-divider {
+
+        font-size: 35px;
+
+    }
+
+
+    .photo-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        grid-auto-rows: 210px;
+
+        gap: 8px;
+
+    }
+
+
+    .photo-large {
+
+        grid-row: span 2;
+
+    }
+
+
+    .photo-wide {
+
+        grid-column: span 2;
+
+    }
+
+
+    .detail-card {
+
+        padding: 40px 25px;
+
+    }
+
+
+    .iframe-card {
+
+        min-height: 450px;
+
+    }
+
+
+    .iframe-placeholder {
+
+        min-height: 450px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .brand-small {
+
+        font-size: 7px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .brand-names {
+
+        font-size: 19px;
+
+    }
+
+
+    .hero-section {
+
+        min-height: 680px;
+
+    }
+
+
+    .hero-content {
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+
+    }
+
+
+    .hero-kicker {
+
+        font-size: 8px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .hero-names {
+
+        font-size: 70px;
+
+        line-height: 0.82;
+
+    }
+
+
+    .hero-names span {
+
+        display: block;
+
+        font-size: 42px;
+
+        margin: 8px 0;
+
+    }
+
+
+    .hero-script {
+
+        font-size: 31px;
+
+    }
+
+
+    .hero-date > span {
+
+        font-size: 45px;
+
+    }
+
+
+    .hero-location {
+
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+
+    .story-text {
+
+        padding: 0 15px;
+
+        font-size: 20px;
+
+    }
+
+
+    .countdown-title {
+
+        font-size: 40px;
+
+    }
+
+
+    .countdown-wrapper {
+
+        gap: 3px;
+
+    }
+
+
+    .countdown-item {
+
+        min-width: 58px;
+
+    }
+
+
+    .countdown-number {
+
+        font-size: 43px;
+
+    }
+
+
+    .countdown-label {
+
+        font-size: 6px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+
+    .countdown-divider {
+
+        font-size: 25px;
+
+    }
+
+
+    .countdown-date {
+
+        font-size: 17px;
+
+    }
+
+
+    .photo-grid {
+
+        grid-auto-rows: 165px;
+
+    }
+
+
+    .photo-overlay {
+
+        display: none;
+
+    }
+
+
+    .section-title {
+
+        font-size: 43px;
+
+    }
+
+
+    .iframe-card {
+
+        min-height: 400px;
+
+    }
+
+
+    .iframe-placeholder {
+
+        min-height: 400px;
+
+        padding: 25px;
+
+    }
+
+
+    .iframe-placeholder h3 {
+
+        font-size: 35px;
+
+    }
+
+
+    .wedding-iframe {
+
+        height: 600px;
+
+    }
+
+
+    .final-section {
+
+        padding: 90px 15px;
+
+    }
+
+
+    .final-decoration {
+
+        font-size: 70px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+}
+
+/* =====================================================
+   SAVE THE DATE OPENING SCREEN
+===================================================== */
+
+#saveTheDateScreen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    overflow: hidden;
+
+    background: #1d1715;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+#saveTheDateScreen.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.save-date-bg {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../images/couple.jpg");
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1.03);
+
+    animation: openingBackgroundZoom 10s ease forwards;
+}
+
+.save-date-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(20, 12, 10, 0.30),
+            rgba(20, 12, 10, 0.15) 45%,
+            rgba(20, 12, 10, 0.60)
+        );
+
+    backdrop-filter: blur(0.5px);
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.save-date-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.save-date-title {
+    margin-bottom: 28px;
+
+    animation: fadeDown 1.2s ease both;
+}
+
+.save-script {
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(4rem, 8vw, 7.5rem);
+
+    line-height: 0.9;
+
+    font-weight: 400;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.30);
+}
+
+.days-left-text {
+    margin-top: 8px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(1rem, 2vw, 1.65rem);
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    color: #ffffff;
+}
+
+#openingDays {
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   DATE CARDS
+===================================================== */
+
+.opening-date-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+/* =====================================================
+   DATE CARD SEQUENTIAL ANIMATION
+===================================================== */
+
+.opening-date-card {
+    opacity: 0;
+    transform: translateY(35px) scale(0.92);
+
+    animation:
+        dateCardAppear 1.2s ease forwards;
+}
+
+/* MONTH */
+.opening-date-card:nth-child(1) {
+    animation-delay: 2s;
+}
+
+/* DAY */
+.opening-date-card:nth-child(2) {
+    animation-delay: 4.5s;
+}
+
+/* YEAR */
+.opening-date-card:nth-child(3) {
+    animation-delay: 7.5s;
+}
+
+
+/* =====================================================
+   CARD APPEAR ANIMATION
+===================================================== */
+
+@keyframes dateCardAppear {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateY(35px)
+            scale(0.92);
+    }
+
+    60% {
+        opacity: 1;
+        transform:
+            translateY(-5px)
+            scale(1.02);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =====================================================
+   INDIVIDUAL CARD
+===================================================== */
+
+.opening-date-card {
+    position: relative;
+
+    width: 160px;
+    height: 215px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255,255,255,0.55);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.35);
+
+    background: #d7c2b5;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.opening-date-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,0.45);
+}
+
+
+/* =====================================================
+   CARD IMAGES
+===================================================== */
+
+.date-card-image {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1.02);
+}
+
+.month-image {
+    background-image: url("../images/photo1.jpg");
+}
+
+.day-image {
+    background-image: url("../images/photo2.jpg");
+}
+
+.year-image {
+    background-image: url("../images/photo3.jpg");
+}
+
+
+/* =====================================================
+   CARD OVERLAY
+===================================================== */
+
+.date-card-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.05),
+            rgba(0,0,0,0.10) 35%,
+            rgba(0,0,0,0.60) 100%
+        );
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.date-card-content {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    padding-bottom: 14px;
+
+    color: white;
+}
+
+.date-number {
+    font-family: "DM Sans", sans-serif;
+
+    font-size: clamp(3rem, 5vw, 4.4rem);
+
+    font-weight: 900;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.04em;
+
+    text-shadow:
+        0 4px 12px rgba(0,0,0,0.35);
+}
+
+.date-label {
+    margin-top: 10px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 0.65rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.25em;
+
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   COUPLE NAME
+===================================================== */
+
+.opening-couple {
+    margin-top: 28px;
+
+    animation: fadeUp 1.2s ease 0.5s both;
+}
+
+.almost-ready {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 0.85rem;
+
+    letter-spacing: 0.30em;
+
+    font-weight: 600;
+
+    color: rgba(255,255,255,0.85);
+
+    margin-bottom: 2px;
+}
+
+.couple-name {
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(2.6rem, 5vw, 4.5rem);
+
+    line-height: 1;
+
+    color: white;
+
+    text-shadow:
+        0 3px 15px rgba(0,0,0,0.35);
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.opening-loading {
+    width: min(320px, 75vw);
+
+    margin-top: 24px;
+
+    animation: fadeUp 1.2s ease 0.7s both;
+}
+
+.loading-text {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.30em;
+
+    color: rgba(255,255,255,0.90);
+
+    margin-bottom: 10px;
+}
+
+.loading-line {
+    position: relative;
+
+    width: 100%;
+    height: 2px;
+
+    background: rgba(255,255,255,0.35);
+
+    overflow: hidden;
+}
+
+#saveDateProgress {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 0%;
+    height: 100%;
+
+    background: #b52b68;
+
+    transition: width 1s linear;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes openingBackgroundZoom {
+
+    from {
+        transform: scale(1.03);
+    }
+
+    to {
+        transform: scale(1.10);
+    }
+}
+
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes cardsAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .opening-date-cards {
+        gap: 15px;
+    }
+
+    .opening-date-card {
+        width: 145px;
+        height: 200px;
+    }
+
+}
+
+/* =========================================================
+   FIVE-PART LOVE STORY
+   WEDDING PAPER / STORYBOOK DESIGN
+========================================================= */
+
+.love-story-section {
+    position: relative;
+    padding: 70px 0;
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 255, 255, 0.9),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(210, 190, 160, 0.10),
+            transparent 35%
+        ),
+        #e8dfd1;
+}
+
+
+/* =========================================================
+   PAPER
+========================================================= */
+
+.love-paper {
+    position: relative;
+
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 90px 70px;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.30),
+            rgba(255,255,255,0.30)
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(110, 90, 65, 0.025) 0px,
+            rgba(110, 90, 65, 0.025) 1px,
+            transparent 1px,
+            transparent 4px
+        ),
+        #f7f1e7;
+
+    border: 1px solid rgba(126, 100, 70, 0.25);
+
+    box-shadow:
+        0 20px 60px rgba(65, 50, 35, 0.12),
+        0 4px 12px rgba(65, 50, 35, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   DOUBLE PAPER BORDER
+========================================================= */
+
+.love-paper::before {
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+
+    border: 1px solid rgba(150, 120, 80, 0.22);
+
+    pointer-events: none;
+}
+
+
+.love-paper::after {
+    content: "";
+
+    position: absolute;
+
+    top: 27px;
+    right: 27px;
+    bottom: 27px;
+    left: 27px;
+
+    border: 1px solid rgba(150, 120, 80, 0.10);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PAPER CORNERS
+========================================================= */
+
+.paper-corner {
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+}
+
+
+/* TOP LEFT */
+
+.paper-corner-top-left {
+    top: 35px;
+    left: 35px;
+
+    border-top: 1px solid #9d8058;
+    border-left: 1px solid #9d8058;
+}
+
+
+.paper-corner-top-left::after {
+    content: "❧";
+
+    position: absolute;
+
+    top: 4px;
+    left: 8px;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    color: #9d8058;
+}
+
+
+/* TOP RIGHT */
+
+.paper-corner-top-right {
+    top: 35px;
+    right: 35px;
+
+    border-top: 1px solid #9d8058;
+    border-right: 1px solid #9d8058;
+}
+
+
+.paper-corner-top-right::after {
+    content: "❧";
+
+    position: absolute;
+
+    top: 4px;
+    right: 8px;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    color: #9d8058;
+
+    transform: scaleX(-1);
+}
+
+
+/* BOTTOM LEFT */
+
+.paper-corner-bottom-left {
+    bottom: 35px;
+    left: 35px;
+
+    border-bottom: 1px solid #9d8058;
+    border-left: 1px solid #9d8058;
+}
+
+
+.paper-corner-bottom-left::after {
+    content: "❧";
+
+    position: absolute;
+
+    bottom: 4px;
+    left: 8px;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    color: #9d8058;
+
+    transform: rotate(270deg);
+}
+
+
+/* BOTTOM RIGHT */
+
+.paper-corner-bottom-right {
+    bottom: 35px;
+    right: 35px;
+
+    border-bottom: 1px solid #9d8058;
+    border-right: 1px solid #9d8058;
+}
+
+
+.paper-corner-bottom-right::after {
+    content: "❧";
+
+    position: absolute;
+
+    bottom: 4px;
+    right: 8px;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    color: #9d8058;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.love-section-heading {
+    position: relative;
+
+    max-width: 760px;
+
+    margin: 0 auto 75px;
+}
+
+
+.love-kicker {
+    font-family: var(--sans);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #92744e;
+
+    margin-bottom: 18px;
+}
+
+
+.love-ornament {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+.love-ornament span {
+    width: 65px;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #b49a72
+    );
+}
+
+
+.love-ornament span:last-child {
+    background: linear-gradient(
+        to left,
+        transparent,
+        #b49a72
+    );
+}
+
+
+.love-ornament i {
+    font-size: 12px;
+
+    color: #a9895c;
+}
+
+
+.love-section-heading h2 {
+    margin: 0;
+
+    font-family: var(--serif);
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    color: #45382c;
+}
+
+
+.love-section-heading h2 span {
+    font-family: var(--script);
+
+    font-size: 0.72em;
+
+    color: #9b7952;
+}
+
+
+.love-section-heading p {
+    max-width: 620px;
+
+    margin: 28px auto 0;
+
+    font-family: var(--sans);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    font-weight: 300;
+
+    color: #756658;
+}
+
+
+/* =========================================================
+   STORY ROW
+========================================================= */
+
+.love-story-row {
+    position: relative;
+
+    min-height: 500px;
+}
+
+
+.love-story-row-reverse {
+    direction: ltr;
+}
+
+
+/* =========================================================
+   PHOTO FRAME
+========================================================= */
+
+.love-photo-frame {
+    position: relative;
+
+    max-width: 510px;
+
+    margin: 0 auto;
+
+    padding: 13px;
+
+    background: #fffdf9;
+
+    border: 1px solid rgba(130, 105, 75, 0.25);
+
+    box-shadow:
+        0 18px 40px rgba(65, 50, 35, 0.14);
+
+    transform: rotate(-1.2deg);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+.love-photo-frame:hover {
+    transform: rotate(0deg) translateY(-6px);
+
+    box-shadow:
+        0 25px 55px rgba(65, 50, 35, 0.20);
+}
+
+
+.love-photo-frame::before {
+    content: "";
+
+    position: absolute;
+
+    top: 7px;
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
+
+    border: 1px solid rgba(160, 130, 90, 0.15);
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+.love-photo-frame img {
+    display: block;
+
+    width: 100%;
+
+    height: 510px;
+
+    object-fit: cover;
+}
+
+
+/* Alternate photo rotation */
+
+.love-story-row-reverse .love-photo-frame {
+    transform: rotate(1.2deg);
+}
+
+
+.love-story-row-reverse .love-photo-frame:hover {
+    transform: rotate(0deg) translateY(-6px);
+}
+
+
+/* =========================================================
+   PHOTO NUMBER
+========================================================= */
+
+.love-photo-number {
+    position: absolute;
+
+    top: -16px;
+    left: -16px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f7f1e7;
+
+    border: 1px solid #b79a70;
+
+    color: #92744e;
+
+    font-family: var(--serif);
+
+    font-size: 17px;
+
+    z-index: 5;
+
+    box-shadow:
+        0 5px 15px rgba(60, 45, 30, 0.12);
+}
+
+
+/* =========================================================
+   STORY TEXT
+========================================================= */
+
+.love-story-content {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    padding: 25px 20px;
+}
+
+
+.love-script {
+    font-family: var(--script);
+
+    font-size: 36px;
+
+    color: #a1825a;
+
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+}
+
+
+.love-story-content h3 {
+    font-family: var(--serif);
+
+    font-size: clamp(36px, 4vw, 50px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    color: #45382c;
+
+    margin: 0 0 22px;
+}
+
+
+.love-divider {
+    width: 75px;
+
+    height: 1px;
+
+    background: #b3976e;
+
+    margin-bottom: 25px;
+}
+
+
+.love-story-content p {
+    font-family: var(--sans);
+
+    font-size: 15px;
+
+    line-height: 1.95;
+
+    font-weight: 300;
+
+    color: #756658;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.love-signature {
+    margin-top: 28px;
+
+    font-family: var(--script);
+
+    font-size: 38px;
+
+    color: #9a7950;
+}
+
+
+.love-quote {
+    margin-top: 30px;
+
+    padding-left: 20px;
+
+    border-left: 2px solid #b3976e;
+
+    font-family: var(--serif);
+
+    font-size: 21px;
+
+    font-style: italic;
+
+    line-height: 1.5;
+
+    color: #77624c;
+}
+
+
+/* =========================================================
+   FINAL NAMES
+========================================================= */
+
+.love-final-names {
+    margin-top: 30px;
+
+    font-family: var(--script);
+
+    font-size: 43px;
+
+    line-height: 1.15;
+
+    color: #98784f;
+}
+
+
+.love-final-names span {
+    font-family: var(--serif);
+
+    font-size: 25px;
+
+    padding: 0 8px;
+}
+
+
+.love-final-date {
+    margin-top: 18px;
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #806747;
+}
+
+
+/* =========================================================
+   FINAL CHAPTER
+========================================================= */
+
+.love-final-chapter {
+    padding-bottom: 30px;
+}
+
+
+.love-final-chapter .love-paper {
+    padding-bottom: 70px;
+}
+
+
+.love-ending {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 70px;
+}
+
+
+.love-ending-line {
+    width: 90px;
+
+    height: 1px;
+
+    background: #b49a72;
+}
+
+
+.love-ending i {
+    font-size: 14px;
+
+    color: #a08057;
+}
+
+
+.love-ending-text {
+    position: absolute;
+
+    margin-top: 55px;
+
+    font-family: var(--script);
+
+    font-size: 28px;
+
+    color: #98784f;
+}
+
+
+/* =========================================================
+   SPACING BETWEEN PAPER SECTIONS
+========================================================= */
+
+.love-paper-section + .love-paper-section {
+    padding-top: 0;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .love-story-section {
+        padding: 40px 15px;
+    }
+
+
+    .love-paper {
+        padding: 70px 35px;
+    }
+
+
+    .love-section-heading {
+        margin-bottom: 55px;
+    }
+
+
+    .love-photo-frame {
+        max-width: 600px;
+    }
+
+
+    .love-photo-frame img {
+        height: 430px;
+    }
+
+
+    .love-story-content {
+        max-width: 600px;
+
+        padding: 15px 10px;
+
+        text-align: center;
+    }
+
+
+    .love-divider {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .love-quote {
+        text-align: left;
+    }
+
+
+    .love-ending {
+        margin-top: 55px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .love-story-section {
+        padding: 25px 8px;
+    }
+
+
+    .love-paper {
+        padding: 60px 22px;
+    }
+
+
+    .love-paper::before {
+        top: 12px;
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+    }
+
+
+    .love-paper::after {
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+    }
+
+
+    .paper-corner {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .paper-corner-top-left,
+    .paper-corner-top-right {
+        top: 25px;
+    }
+
+
+    .paper-corner-bottom-left,
+    .paper-corner-bottom-right {
+        bottom: 25px;
+    }
+
+
+    .paper-corner-top-left,
+    .paper-corner-bottom-left {
+        left: 25px;
+    }
+
+
+    .paper-corner-top-right,
+    .paper-corner-bottom-right {
+        right: 25px;
+    }
+
+
+    .love-section-heading {
+        margin-bottom: 45px;
+    }
+
+
+    .love-kicker {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .love-section-heading h2 {
+        font-size: 42px;
+    }
+
+
+    .love-section-heading p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+
+    .love-photo-frame {
+        padding: 9px;
+
+        transform: none !important;
+    }
+
+
+    .love-photo-frame img {
+        height: 360px;
+    }
+
+
+    .love-photo-number {
+        width: 42px;
+        height: 42px;
+
+        top: -10px;
+        left: -10px;
+
+        font-size: 15px;
+    }
+
+
+    .love-script {
+        font-size: 31px;
+    }
+
+
+    .love-story-content h3 {
+        font-size: 37px;
+    }
+
+
+    .love-story-content p {
+        font-size: 14px;
+
+        line-height: 1.85;
+    }
+
+
+    .love-signature {
+        font-size: 34px;
+    }
+
+
+    .love-quote {
+        font-size: 18px;
+    }
+
+
+    .love-final-names {
+        font-size: 36px;
+    }
+
+
+    .love-final-date {
+        font-size: 8px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .love-ending-line {
+        width: 50px;
+    }
+
+
+    .love-ending-text {
+        font-size: 24px;
+    }
+
+}
+
+/* =========================================================
+   WEDDING INFORMATION SECTIONS
+   ATTIRE / TIMELINE / ENTOURAGE / GIFTS / PHOTOS
+========================================================= */
+
+.wedding-info-section {
+    position: relative;
+
+    padding: 35px 15px;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,0.75),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(190,165,130,0.10),
+            transparent 35%
+        ),
+        #e5dccd;
+}
+
+
+.wedding-paper-card {
+    position: relative;
+
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 90px 60px;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(120,95,65,0.018) 0px,
+            rgba(120,95,65,0.018) 1px,
+            transparent 1px,
+            transparent 4px
+        ),
+        #f8f2e8;
+
+    border: 1px solid rgba(125,100,70,0.22);
+
+    box-shadow:
+        0 20px 55px rgba(60,45,30,0.12);
+
+    overflow: hidden;
+}
+
+
+.wedding-paper-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+
+    border: 1px solid rgba(145,115,75,0.20);
+
+    pointer-events: none;
+}
+
+
+.wedding-paper-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 27px;
+    right: 27px;
+    bottom: 27px;
+    left: 27px;
+
+    border: 1px solid rgba(145,115,75,0.08);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CORNERS
+========================================================= */
+
+.info-corner {
+    position: absolute;
+
+    width: 65px;
+    height: 65px;
+
+    opacity: 0.35;
+
+    z-index: 1;
+}
+
+
+.info-corner-tl {
+    top: 35px;
+    left: 35px;
+
+    border-top: 1px solid #a5875f;
+    border-left: 1px solid #a5875f;
+}
+
+
+.info-corner-tr {
+    top: 35px;
+    right: 35px;
+
+    border-top: 1px solid #a5875f;
+    border-right: 1px solid #a5875f;
+}
+
+
+.info-corner-bl {
+    bottom: 35px;
+    left: 35px;
+
+    border-bottom: 1px solid #a5875f;
+    border-left: 1px solid #a5875f;
+}
+
+
+.info-corner-br {
+    bottom: 35px;
+    right: 35px;
+
+    border-bottom: 1px solid #a5875f;
+    border-right: 1px solid #a5875f;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.info-heading {
+    max-width: 750px;
+
+    margin: 0 auto 60px;
+}
+
+
+.info-kicker {
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #92734d;
+
+    margin-bottom: 18px;
+}
+
+
+.info-ornament {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+.info-ornament span {
+    width: 70px;
+
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #b59a70
+    );
+}
+
+
+.info-ornament span:last-child {
+    background: linear-gradient(
+        to left,
+        transparent,
+        #b59a70
+    );
+}
+
+
+.info-ornament i {
+    color: #a08056;
+
+    font-size: 13px;
+}
+
+
+.info-heading h2 {
+    margin: 0;
+
+    font-family: var(--serif);
+
+    font-size: clamp(42px,5vw,62px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    color: #45382c;
+}
+
+
+.info-heading p {
+    max-width: 620px;
+
+    margin: 22px auto 0;
+
+    font-family: var(--sans);
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    font-weight: 300;
+
+    color: #756658;
+}
+
+
+/* =========================================================
+   ATTIRE
+========================================================= */
+
+.attire-card {
+    position: relative;
+
+    height: 100%;
+
+    padding: 45px 30px 35px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.45);
+
+    border: 1px solid rgba(145,115,75,0.20);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.attire-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 35px rgba(70,50,30,0.12);
+}
+
+
+.attire-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid #b79a70;
+
+    color: #98784f;
+
+    font-size: 24px;
+}
+
+
+.attire-number {
+    font-family: var(--serif);
+
+    font-size: 13px;
+
+    color: #aa8b61;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.attire-card h3 {
+    margin: 0;
+
+    font-family: var(--serif);
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    color: #45382c;
+}
+
+
+.attire-line {
+    width: 55px;
+
+    height: 1px;
+
+    background: #b59a70;
+
+    margin: 17px auto;
+}
+
+
+.attire-highlight {
+    font-family: var(--script) !important;
+
+    font-size: 27px !important;
+
+    color: #98784f !important;
+}
+
+
+.attire-card p {
+    font-family: var(--sans);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    font-weight: 300;
+
+    color: #756658;
+}
+
+
+.attire-note {
+    margin-top: 24px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(145,115,75,0.15);
+
+    font-family: var(--sans);
+
+    font-size: 11px;
+
+    color: #806747;
+}
+
+
+.attire-note i {
+    margin-right: 6px;
+
+    color: #a08056;
+}
+
+
+/* =========================================================
+   GENTLE REMINDERS
+========================================================= */
+
+.gentle-reminders {
+    margin-top: 55px;
+
+    padding: 30px;
+
+    border-top: 1px solid rgba(145,115,75,0.20);
+
+    border-bottom: 1px solid rgba(145,115,75,0.20);
+}
+
+
+.gentle-reminder-title {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 25px;
+
+    font-family: var(--serif);
+
+    font-size: 25px;
+
+    color: #594737;
+}
+
+
+.gentle-reminder-title i {
+    font-size: 15px;
+
+    color: #a08056;
+}
+
+
+.reminder-item {
+    height: 100%;
+
+    padding: 13px;
+
+    text-align: center;
+
+    font-family: var(--sans);
+
+    font-size: 12px;
+
+    color: #756658;
+}
+
+
+.reminder-item i {
+    color: #a08056;
+
+    margin-right: 6px;
+}
+
+
+/* =========================================================
+   WEDDING TIMELINE
+========================================================= */
+
+.timeline-section {
+    padding-top: 0;
+}
+
+
+.wedding-timeline {
+    position: relative;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 10px 0;
+}
+
+
+.wedding-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: 50%;
+
+    width: 1px;
+
+    background: #b9a07b;
+
+    transform: translateX(-50%);
+}
+
+
+.timeline-item {
+    position: relative;
+
+    display: flex;
+
+    width: 50%;
+
+    padding: 25px 45px 25px 0;
+}
+
+
+.timeline-item:nth-child(even) {
+    margin-left: 50%;
+
+    padding: 25px 0 25px 45px;
+}
+
+
+.timeline-dot {
+    position: absolute;
+
+    right: -18px;
+
+    top: 30px;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f8f2e8;
+
+    border: 1px solid #aa8c63;
+
+    color: #96764e;
+
+    font-family: var(--serif);
+
+    font-size: 11px;
+
+    z-index: 2;
+}
+
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -18px;
+
+    right: auto;
+}
+
+
+.timeline-content {
+    width: 100%;
+
+    padding: 25px;
+
+    background: rgba(255,255,255,0.45);
+
+    border: 1px solid rgba(145,115,75,0.18);
+
+    box-shadow:
+        0 8px 25px rgba(60,45,30,0.06);
+}
+
+
+.timeline-time {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: var(--sans);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #a08056;
+}
+
+
+.timeline-content h3 {
+    margin: 0 0 10px;
+
+    font-family: var(--serif);
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+    color: #45382c;
+}
+
+
+.timeline-content p {
+    margin: 0;
+
+    font-family: var(--sans);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #756658;
+}
+
+
+/* =========================================================
+   ENTOURAGE
+========================================================= */
+
+.entourage-section {
+    padding-top: 0;
+}
+
+
+.entourage-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+
+.entourage-group {
+    padding: 35px 30px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.42);
+
+    border: 1px solid rgba(145,115,75,0.18);
+}
+
+
+.entourage-group-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #b59a70;
+
+    border-radius: 50%;
+
+    color: #997950;
+
+    font-size: 19px;
+}
+
+
+.entourage-group h3 {
+    margin: 0;
+
+    font-family: var(--serif);
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+    color: #45382c;
+}
+
+
+.entourage-divider {
+    width: 50px;
+
+    height: 1px;
+
+    background: #b59a70;
+
+    margin: 16px auto 22px;
+}
+
+
+.entourage-names {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.entourage-names div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.entourage-names span {
+    font-family: var(--sans);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #9a8062;
+}
+
+
+.entourage-names strong {
+    font-family: var(--serif);
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    color: #594737;
+}
+
+
+.entourage-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.entourage-list span {
+    font-family: var(--serif);
+
+    font-size: 20px;
+
+    color: #594737;
+}
+
+
+/* =========================================================
+   GIFTS
+========================================================= */
+
+.gift-section {
+    padding-top: 0;
+}
+
+
+.gift-card {
+    height: 100%;
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.48);
+
+    border: 1px solid rgba(145,115,75,0.20);
+}
+
+
+.gift-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid #b59a70;
+
+    color: #98784f;
+
+    font-size: 24px;
+}
+
+
+.gift-card h3 {
+    margin: 0 0 15px;
+
+    font-family: var(--serif);
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    color: #45382c;
+}
+
+
+.gift-card > p {
+    max-width: 450px;
+
+    margin: 0 auto 25px;
+
+    font-family: var(--sans);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #756658;
+}
+
+
+/* =========================================================
+   E-WALLET
+========================================================= */
+
+.wallet-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    max-width: 400px;
+
+    margin: 15px auto;
+
+    padding: 16px;
+
+    text-align: left;
+
+    background: #f5eee3;
+
+    border: 1px solid rgba(145,115,75,0.18);
+}
+
+
+.wallet-logo {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #e2d3bc;
+
+    color: #72583a;
+
+    font-family: var(--serif);
+
+    font-size: 24px;
+
+    font-weight: 600;
+}
+
+
+.bank-logo {
+    background: #ded0bb;
+}
+
+
+.wallet-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.wallet-info span {
+    font-family: var(--sans);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #98784f;
+}
+
+
+.wallet-info strong {
+    font-family: var(--serif);
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    color: #594737;
+}
+
+
+.wallet-info small {
+    font-family: var(--sans);
+
+    font-size: 12px;
+
+    color: #756658;
+}
+
+
+.gift-note {
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(145,115,75,0.16);
+
+    font-family: var(--sans);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    color: #806747;
+}
+
+
+.gift-note i {
+    color: #a08056;
+
+    margin-right: 5px;
+}
+
+
+/* =========================================================
+   PHYSICAL GIFT MESSAGE
+========================================================= */
+
+.gift-message {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    min-height: 120px;
+
+    padding: 25px;
+
+    background: #f5eee3;
+
+    border: 1px solid rgba(145,115,75,0.15);
+}
+
+
+.gift-message i {
+    font-size: 30px;
+
+    color: #a08056;
+}
+
+
+.gift-message span {
+    max-width: 250px;
+
+    font-family: var(--script);
+
+    font-size: 27px;
+
+    line-height: 1.3;
+
+    color: #98784f;
+}
+
+
+/* =========================================================
+   GUEST PHOTO UPLOAD
+========================================================= */
+
+.guest-photo-section {
+    padding-top: 0;
+}
+
+
+.guest-photo-content {
+    max-width: 720px;
+
+    margin: 0 auto;
+}
+
+
+.guest-photo-icon {
+    width: 85px;
+    height: 85px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid #ad9169;
+
+    color: #98784f;
+
+    font-size: 30px;
+}
+
+
+.guest-photo-content h2 {
+    margin: 0;
+
+    font-family: var(--serif);
+
+    font-size: clamp(40px,5vw,60px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    color: #45382c;
+}
+
+
+.guest-photo-content > p {
+    max-width: 600px;
+
+    margin: 25px auto 0;
+
+    font-family: var(--sans);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    color: #756658;
+}
+
+
+.guest-photo-subtext {
+    font-size: 13px !important;
+
+    max-width: 520px !important;
+
+    margin-top: 12px !important;
+}
+
+
+/* =========================================================
+   GOOGLE DRIVE BUTTON
+========================================================= */
+
+.google-drive-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    margin-top: 30px;
+
+    padding: 17px 28px;
+
+    color: #f8f2e8;
+
+    background: #594737;
+
+    border: 1px solid #594737;
+
+    text-decoration: none;
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.google-drive-button:hover {
+    color: #fff;
+
+    background: #735d44;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(60,45,30,0.16);
+}
+
+
+.google-drive-button i:first-child {
+    font-size: 18px;
+}
+
+
+.google-drive-button i:last-child {
+    font-size: 11px;
+}
+
+
+.upload-note {
+    margin-top: 22px;
+
+    font-family: var(--sans);
+
+    font-size: 11px;
+
+    color: #806747;
+}
+
+
+.upload-note i {
+    margin-right: 5px;
+
+    color: #a08056;
+}
+
+
+.guest-photo-thanks {
+    margin-top: 35px;
+
+    font-family: var(--script);
+
+    font-size: 30px;
+
+    color: #98784f;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .wedding-info-section {
+        padding: 20px 8px;
+    }
+
+
+    .wedding-paper-card {
+        padding: 70px 25px;
+    }
+
+
+    .wedding-paper-card::before {
+        top: 12px;
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+    }
+
+
+    .wedding-paper-card::after {
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+    }
+
+
+    .info-corner {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .info-corner-tl,
+    .info-corner-tr {
+        top: 25px;
+    }
+
+
+    .info-corner-bl,
+    .info-corner-br {
+        bottom: 25px;
+    }
+
+
+    .info-corner-tl,
+    .info-corner-bl {
+        left: 25px;
+    }
+
+
+    .info-corner-tr,
+    .info-corner-br {
+        right: 25px;
+    }
+
+
+    .info-heading {
+        margin-bottom: 45px;
+    }
+
+
+    .info-heading h2 {
+        font-size: 42px;
+    }
+
+
+    /* TIMELINE */
+
+    .wedding-timeline::before {
+        left: 17px;
+
+        transform: none;
+    }
+
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding:
+            20px 0
+            20px 48px;
+    }
+
+
+    .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 0;
+
+        right: auto;
+
+        top: 25px;
+    }
+
+
+    .timeline-content h3 {
+        font-size: 26px;
+    }
+
+
+    /* ENTOURAGE */
+
+    .entourage-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* GIFT */
+
+    .gift-card {
+        padding: 35px 20px;
+    }
+
+
+    .wallet-box {
+        text-align: left;
+    }
+
+
+    .guest-photo-content h2 {
+        font-size: 42px;
+    }
+
+
+    .guest-photo-content > p {
+        font-size: 14px;
+    }
+
+
+    .google-drive-button {
+        width: 100%;
+
+        max-width: 340px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .wedding-paper-card {
+        padding: 60px 18px;
+    }
+
+
+    .attire-card {
+        padding: 35px 20px;
+    }
+
+
+    .gentle-reminders {
+        padding: 25px 10px;
+    }
+
+
+    .gentle-reminder-title {
+        font-size: 22px;
+    }
+
+
+    .reminder-item {
+        font-size: 11px;
+    }
+
+
+    .gift-message span {
+        font-size: 24px;
+    }
+
+
+    .guest-photo-thanks {
+        font-size: 26px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .save-date-content {
+        padding:
+            20px
+            15px
+            25px;
+    }
+
+    .save-date-title {
+        margin-bottom: 22px;
+    }
+
+    .save-script {
+        font-size: clamp(3.6rem, 15vw, 5.5rem);
+    }
+
+    .days-left-text {
+        font-size: 0.95rem;
+
+        letter-spacing: 0.10em;
+    }
+
+    .opening-date-cards {
+        gap: 8px;
+
+        width: 100%;
+    }
+
+    .opening-date-card {
+        width: calc((100vw - 50px) / 3);
+
+        max-width: 125px;
+
+        height: 175px;
+
+        border-radius: 15px;
+    }
+
+    .date-number {
+        font-size: clamp(2.2rem, 11vw, 3.3rem);
+    }
+
+    .date-label {
+        font-size: 0.48rem;
+
+        letter-spacing: 0.16em;
+    }
+
+    .date-card-content {
+        padding-bottom: 11px;
+    }
+
+    .opening-couple {
+        margin-top: 20px;
+    }
+
+    .almost-ready {
+        font-size: 0.65rem;
+
+        letter-spacing: 0.18em;
+    }
+
+    .couple-name {
+        font-size: clamp(2.2rem, 11vw, 3.4rem);
+    }
+
+    .opening-loading {
+        margin-top: 18px;
+    }
+
+    .loading-text {
+        font-size: 0.52rem;
+
+        letter-spacing: 0.20em;
+    }
+}
