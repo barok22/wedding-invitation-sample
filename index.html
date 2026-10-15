@@ -1549,7 +1549,8 @@
 
 
 <!-- =========================================================
-     RSVP / GOOGLE WEB APP
+     RSVP + GUESTBOOK + PUBLIC MESSAGES
+     GOOGLE APPS SCRIPT IFRAME
 ========================================================= -->
 
 <section
@@ -1558,6 +1559,8 @@
 
     <div class="container">
 
+        <!-- SECTION HEADING -->
+
         <div class="text-center mb-5">
 
             <div class="section-kicker reveal">
@@ -1565,74 +1568,44 @@
             </div>
 
             <div class="section-ornament reveal">
-
                 <span></span>
-
                 <i class="bi bi-envelope-heart"></i>
-
                 <span></span>
-
             </div>
 
             <h2 class="section-title reveal">
-                Kindly Confirm Your Attendance
+                Celebrate With Us
             </h2>
 
             <p class="section-description reveal">
-
-                We would love to celebrate this special
-                moment with you.
-
+                Confirm your attendance, share your wishes,
+                and leave a beautiful message for the couple.
             </p>
 
         </div>
 
+        <!-- EMBEDDED GOOGLE WEB APP -->
 
-        <!-- =================================================
-             GOOGLE WEB APP PLACEHOLDER
-
-             Replace the src later with your Google Web App URL.
-        ================================================== -->
-
-        <div class="iframe-card reveal">
-
-            <div class="iframe-placeholder">
-
-                <div class="iframe-placeholder-icon">
-
-                    <i class="bi bi-calendar-heart"></i>
-
-                </div>
-
-                <h3>
-                    RSVP
-                </h3>
-
-                <p>
-                    Your RSVP form will appear here.
-                </p>
-
-                <span>
-                    Google Web App
-                </span>
-
-            </div>
-
-
-            <!--
-
-            WHEN YOUR GOOGLE WEB APP IS READY,
-            REPLACE THE PLACEHOLDER ABOVE WITH:
+        <div
+            id="messages"
+            class="iframe-card reveal">
 
             <iframe
-                src="YOUR_GOOGLE_WEB_APP_URL"
+                id="weddingGuestApp"
                 class="wedding-iframe"
-                title="Wedding RSVP">
+                src="https://script.google.com/macros/s/AKfycbwpyJ8nG1-eIB5Lx_VLbrM1O8WHJmGBFioI-eG0ji32P0TrOb4o6IJHDgp0EOkTTys/exec?page=Public"
+                title="Wedding invitation, RSVP, and guestbook"
+                loading="lazy"
+                allow="clipboard-write"
+                referrerpolicy="strict-origin-when-cross-origin">
             </iframe>
 
-            -->
-
         </div>
+
+        <p class="text-center mt-3 small">
+            <i class="bi bi-heart-fill"></i>
+            Thank you for being part of our special day.
+        </p>
 
     </div>
 
@@ -1698,13 +1671,15 @@
                     Guest Messages
                 </h3>
 
-                <p>
-                    Your guest message form will appear here.
-                </p>
-
-                <span>
-                    Google Web App
-                </span>
+                <iframe
+                id="weddingGuestApp"
+                class="wedding-iframe"
+                src="https://script.google.com/macros/s/AKfycbwpyJ8nG1-eIB5Lx_VLbrM1O8WHJmGBFioI-eG0ji32P0TrOb4o6IJHDgp0EOkTTys/exec?page=messages"
+                title="Wedding invitation, RSVP, and guestbook"
+                loading="lazy"
+                allow="clipboard-write"
+                referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
 
             </div>
 
